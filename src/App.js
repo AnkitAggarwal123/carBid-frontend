@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import MainPane from "./component/admin/mainPanel/MainPane";
+import MaxBid from "./component/admin/maxbid/MaxBid";
+import Body from "./component/customer/frontPage/Body";
+import FrontPage from "./component/customer/frontPage/Header";
+import Login from "./component/customer/loginPage/Login";
+import RegistrationPage from "./component/customer/registerationPage/RegistrationPage";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const routes = createBrowserRouter([
+    {
+      path : "/",
+      element : <FrontPage/>
+    },
+    {
+      path : "/LogIN",
+      element : <Login/>
+    },
+    {
+      path : "/signup",
+      element : <RegistrationPage/>
+    },
+    {
+      path : "/admin",
+      element : <MainPane/>
+    }
+    
+  ])
+  return(
+      <RouterProvider router={routes}/>
+  )
 }
 
 export default App;

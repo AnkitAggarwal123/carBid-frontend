@@ -1,0 +1,54 @@
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 320px;
+    width: 270px;
+}
+.bu{
+    padding: 5px 10px 5px 10px;
+    border-radius: 4px;
+    color: white;
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.auction{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 50px;
+}
+
+/* Body.css */
+.blurred-bg {
+    filter: blur(5px); /* Example of blurring the background */
+    pointer-events: none;
+  }
+  
+  .popup-overlay {
+    position: fixed;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the popup */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 50; /* Ensure overlay is above blurred background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background-color: #fff; /* Popup content background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Example of box shadow */
+    width: 300px; /* Adjust width as needed */
+  }
+
